@@ -10,13 +10,12 @@
     <!-- -*- extra stuff goes here -*- -->
 
     <plone:behavior
-        name="nva.webcode.attachment_type"
-        title="AttachmentType"
+        name="nva.webcode.webcode"
+        title="Webcode"
         description="Markiert Artikel in Plone mit einem Webcode"
-        provides=".attachment_type.IAttachmentType"
-        factory=".attachment_type.AttachmentType"
-        marker=".attachment_type.IAttachmentTypeMarker"
+        provides=".webcode.IWebcode"
+        factory=".webcode.Webcode"
+        marker=".webcode.IWebcodeMarker"
         />
-
 
 </configure>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<object name="portal_actions" meta_type="Plone Actions Tool"
+   xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+ <object name="object_buttons" meta_type="CMF Action Category">
+  <object name="Fields" meta_type="CMF Action" i18n:domain="nva.portlet.webcode">
+    <property name="title" i18n:translate="">Webcode erneuern</property>
+    <property name="description" i18n:translate=""></property>
+    <!-- For some reason Zope is considering Fields & Actions views as canonical objects -->
+    <!-- The condition below works around this by building 1) an absolute url for the form -->
+    <!-- Or 2) a relative one when user is not at canonical view -->
+    <property
+      name="url_expr">python:object_url + '/@@renewwebcode'</property>
+    <property name="icon_expr"></property>
+    <property
+      name="available_expr">python:hasattr(object, 'webcode')</property>
+    <property name="permissions">
+      <element value="Modify portal content"/>
+    </property>
+    <property name="visible">True</property>
+  </object>
+ </object>
+</object>

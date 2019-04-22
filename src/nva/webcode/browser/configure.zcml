@@ -18,4 +18,11 @@
       directory="static"
       />
 
+  <browser:page
+      name="renewwebcode"
+      for="zope.interface.Interface"
+      class=".renewview.RenewWebcode"
+      permission="zope2.View"
+      />
+
 </configure>

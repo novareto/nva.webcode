@@ -32,7 +32,11 @@ def createWebcode():
         zufallszahl=str(random.randint(100000, 999999))
         code=konstante+zufallszahl
         results =  ploneapi.content.find(Webcode=code)
-    return unicode(code)
+    try:
+        mycode = code.decode('utf-8')
+    except:
+        mycode = code
+    return mycode
 
 class IWebcodeMarker(Interface):
     pass
